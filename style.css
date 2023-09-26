@@ -1,57 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Slab&display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---- Reset End */
+:root{
+    --dark_color : #12486B;
+    --element_color : #419197;
+    --background_color : #78D6C6;
+    --text_color : #f5FCCD;
+}
+
+
+
+body{
+    background-color: var(--background_color);
+    
+    font-family:"Roboto Slab";
+    font: bold 1.2rem "Roboto Slab" ,sans-serif;
+    color: var(--text_color);
+    text-align: center;
+}
+
+
 nav {
-    border: 2px solid green;
+    background-color: var(--element_color) ;
     display: flex;
     justify-content: space-between;
+    padding: 15px 50px 15px 50px;
+
+    font-family: "Raleway" , sans-serif;
 }
 
 .nav-left {
-    border: 2px solid green;
+    
     display:flex;
     align-items: center;
 }
 
 .nav-right {
-    border: 2px solid green;
     width:80%;
 }
 
 ul {
-    border: 2px solid green;
+    
     display:flex;
     justify-content: space-between;
 }
 
 li {
-    border: 2px solid green;
+    
 }
 
 header {
-    border: 2px solid orange;
+    padding:30px;
+
+}
+
+header p{
+    text-transform: lowercase;
 }
 
 #duck {
-    border: 2px solid yellow;
+    padding:30px;
 }
 
+
+
 .text {
-    border: 2px solid yellow;
+    
 }
 
 .text p {
-    border: 2px solid yellow;
+    
 }
 
 .duck {
-    border: 2px solid yellow;
+    
     display:flex;
 }
 
 #emergency {
-    border: 2px solid blue;
+    background-color: var(--element_color);
+    border-top: solid 2px var(--dark_color);
+    border-bottom: solid 2px var(--dark_color);
+    padding:30px;
 }
 
 .grid-container {
-    border: 2px solid blue;
+    
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:3px;
@@ -61,7 +147,7 @@ header {
 }
 
 .grid-item {
-    border: 2px solid pink;
+    
     display:flex;
     justify-content: center;
     height: 150px;
@@ -69,8 +155,65 @@ header {
 }
 
 footer {
-    border: 2px solid red;
+    
     display:flex;
     flex-direction: column;
     text-align: center;
+}
+
+a{
+    color:var(--dark_color);
+    text-decoration: none;
+    border-bottom: solid 1px #12486b90;
+    border-top: solid 1px #12486b90;
+    border-width: 5%;
+    margin-left: 25px;
+    margin-right: 25px;
+    transition: all 0.2s ease-in-out;  
+}
+nav a:hover{
+    /*color:var(--background_color);*/
+    color:var(--background_color);
+    border-style: double;
+    border-bottom: solid 1px #12486B;
+    border-top: solid 1px #12486B;
+    transition: color 0.5s;
+    transition: all 0.4s ease-in-out;  
+    padding-left: 25px;
+    padding-right:25px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+a:active{
+    color:var(--text_color);
+}
+
+form{
+    background-color: var(--dark_color);
+    padding: 15px 25% 15px 25%;
+    display: flex;
+    flex-direction: column;
+    
+
+
+}
+
+form *:not(button) {
+    background-color: var(--element_color);
+    margin: 10px;
+}
+form button{
+    border:solid 1px var(--background_color);
+    background-color:  var(--dark_color);
+    margin: 5px;
+    padding: 3px;
+}
+form button:hover{
+    border:solid 2px var(--background_color);
+    color:var(--background_color);
+    margin-bottom:4px;
+    padding: 2px;
+    transition:  color 0.1s ease-in-out;
+    
 }
